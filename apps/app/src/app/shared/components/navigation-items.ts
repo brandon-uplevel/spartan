@@ -1,0 +1,134 @@
+export type Link = {
+	label: string;
+	url: string;
+	wip?: boolean;
+	new?: boolean;
+	exact?: boolean;
+};
+type NavItem = {
+	label: string;
+	url: string;
+	links: Link[];
+};
+
+export const pageNavs: Link[] = [
+	{ label: 'Home', url: '/' },
+	{ label: 'Docs', url: '/documentation' },
+	{ label: 'Stack', url: '/stack' },
+	{ label: 'Components', url: '/components' },
+	{ label: 'Blocks', url: '/blocks', new: true },
+	{ label: 'Colors', url: '/colors' },
+];
+
+export const components: Link[] = [
+	{ label: 'Accordion', url: '/accordion' },
+	{ label: 'Alert', url: '/alert' },
+	{ label: 'Alert Dialog', url: '/alert-dialog' },
+	{ label: 'Aspect Ratio', url: '/aspect-ratio' },
+	{ label: 'Autocomplete', url: '/autocomplete' },
+	{ label: 'Avatar', url: '/avatar' },
+	{ label: 'Badge', url: '/badge' },
+	{ label: 'Breadcrumb', url: '/breadcrumb' },
+	{ label: 'Button', url: '/button' },
+	{ label: 'Button Group', url: '/button-group' },
+	{ label: 'Calendar', url: '/calendar' },
+	{ label: 'Card', url: '/card' },
+	{ label: 'Carousel', url: '/carousel' },
+	{ label: 'Checkbox', url: '/checkbox' },
+	{ label: 'Collapsible', url: '/collapsible' },
+	{ label: 'Combobox', url: '/combobox', new: true },
+	{ label: 'Command', url: '/command' },
+	{ label: 'Context Menu', url: '/context-menu' },
+	{ label: 'Data Table', url: '/data-table' },
+	{ label: 'Date Picker', url: '/date-picker' },
+	{ label: 'Dialog', url: '/dialog' },
+	{ label: 'Dropdown Menu', url: '/dropdown-menu' },
+	{ label: 'Empty', url: '/empty' },
+	{ label: 'Field', url: '/field' },
+	{ label: 'Form Field', url: '/form-field' },
+	{ label: 'Hover Card', url: '/hover-card' },
+	{ label: 'Icon', url: '/icon' },
+	{ label: 'Input Group', url: '/input-group' },
+	{ label: 'Input OTP', url: '/input-otp' },
+	{ label: 'Input', url: '/input' },
+	{ label: 'Item', url: '/item' },
+	{ label: 'Kbd', url: '/kbd' },
+	{ label: 'Label', url: '/label' },
+	{ label: 'Menubar', url: '/menubar' },
+	{ label: 'Native Select', url: '/native-select', new: true },
+	{ label: 'Navigation Menu', url: '/navigation-menu' },
+	{ label: 'Pagination', url: '/pagination' },
+	{ label: 'Popover', url: '/popover' },
+	{ label: 'Progress', url: '/progress' },
+	{ label: 'Radio Group', url: '/radio-group' },
+	{ label: 'Resizable', url: '/resizable' },
+	{ label: 'Scroll Area', url: '/scroll-area' },
+	{ label: 'Select', url: '/select' },
+	{ label: 'Separator', url: '/separator' },
+	{ label: 'Sheet', url: '/sheet' },
+	{ label: 'Sidebar', url: '/sidebar' },
+	{ label: 'Skeleton', url: '/skeleton' },
+	{ label: 'Slider', url: '/slider', new: true },
+	{ label: 'Sonner (Toast)', url: '/sonner' },
+	{ label: 'Spinner', url: '/spinner' },
+	{ label: 'Switch', url: '/switch' },
+	{ label: 'Table', url: '/table' },
+	{ label: 'Tabs', url: '/tabs' },
+	{ label: 'Textarea', url: '/textarea' },
+	{ label: 'Toggle', url: '/toggle' },
+	{ label: 'Toggle Group', url: '/toggle-group' },
+	{ label: 'Tooltip', url: '/tooltip', new: true },
+];
+
+export const forms: Link[] = [
+	{ label: 'Forms', url: '/', new: true, exact: true },
+	{ label: 'Reactive Forms', url: '/reactive-forms', new: true },
+	{ label: 'Signal Forms', url: '/signal-forms', wip: true },
+];
+
+export const sidenavItems: NavItem[] = [
+	{
+		label: 'Getting Started',
+		url: '/documentation',
+		links: [
+			{ label: 'Introduction', url: '/introduction' },
+			{ label: 'Changelog', url: '/changelog' },
+			{ label: 'About & Credits', url: '/about' },
+		],
+	},
+	{
+		label: 'UI',
+		url: '/documentation',
+		links: [
+			{ label: 'Installation', url: '/installation' },
+			{ label: 'components.json', url: '/components-json' },
+			{ label: 'Theming', url: '/theming' },
+			{ label: 'Dark Mode', url: '/dark-mode' },
+			{ label: 'CLI', url: '/cli' },
+			{ label: 'Typography', url: '/typography' },
+			{ label: 'Figma', url: '/figma' },
+			{ label: 'Version Support', url: '/version-support' },
+			{ label: 'Health Checks', url: '/health-checks' },
+			{ label: 'Update Guide', url: '/update-guide' },
+		],
+	},
+	{
+		label: 'Components',
+		url: '/components',
+		links: components,
+	},
+	{
+		label: 'Forms',
+		url: '/forms',
+		links: forms,
+	},
+	{
+		label: 'Stack',
+		url: '/stack',
+		links: [
+			{ label: 'Overview', url: '/overview' },
+			{ label: 'Technologies', url: '/technologies' },
+			{ label: 'Installation', url: '/installation' },
+		],
+	},
+];
